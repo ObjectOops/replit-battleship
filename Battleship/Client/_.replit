@@ -1,0 +1,14 @@
+onBoot = "echo -e \"\\e[1mPress Run to Play\\e[m\""
+
+compile = ["make", "-s"]
+
+run = "./launcher"
+
+entrypoint = "README.md"
+hidden = ["main", "launcher", "**/*.o", "**/*.d", ".ccls-cache", "Makefile", "battleship"]
+
+[languages.cpp]
+pattern = "**/*.{cpp,h}"
+
+[languages.cpp.languageServer]
+start = "ccls"
